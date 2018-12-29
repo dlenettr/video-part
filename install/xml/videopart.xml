@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Video Part</id>
+	<version>1.5</version>
+	<vqmver>2.4.1</vqmver>
+	<author>MaRZoCHi</author>
+	<file name="engine/modules/show.full.php">
+		<operation>
+			<ignoreif><![CDATA[include ENGINE_DIR . "/modules/videopart.php";]]></ignoreif>
+			<search position="before"><![CDATA[$news_seiten = explode( "{PAGEBREAK}", $row['full_story'] );]]></search>
+			<add><![CDATA[
+		// Video Part - start
+		include ENGINE_DIR . "/modules/videopart.php";
+		// Video Part - end
+]]></add>
+		</operation>
+	</file>
+</modification>
